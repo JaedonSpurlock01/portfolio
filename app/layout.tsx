@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import localFont from "next/font/local";
 import "./globals.css";
+
+import "mapbox-gl/dist/mapbox-gl.css";
+import { ShootingStars } from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/stars-background";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +33,20 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <main className="w-full dark:bg-neutral-950 bg-neutral-50">
+            {/* <ShootingStars
+              starColor="#FFFFFF"
+              trailColor="#222222"
+              className="hidden dark:block fixed inset-0 pointer-events-none"
+            />
+            <StarsBackground
+              starDensity={0.00005}
+              className="hidden dark:block fixed inset-0 pointer-events-none"
+            /> */}
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
