@@ -141,12 +141,8 @@ export const projects = [
     tags: [
       "C++",
       "ROS",
-      "PWM",
       "Raspberry PI",
       "SDL API",
-      "Motors",
-      "DC-DC",
-      "Joystick",
     ],
   },
 ] as const;

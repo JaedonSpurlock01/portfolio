@@ -5,7 +5,8 @@ import {
   CardDescription,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 const ProjectCard = ({
   title,
@@ -15,15 +16,28 @@ const ProjectCard = ({
   imageSrc,
   tags,
   date,
-}: any) => {
+}: {
+  title: string;
+  description: string;
+  websiteUrl?: string;
+  githubUrl?: string;
+  imageSrc: string;
+  tags: string[];
+  date: string;
+}) => {
   return (
-    <Card key={date} className="overflow-hidden flex flex-col w-full shadow-md border border-border bg-primary-foreground">
+    <Card
+      key={date}
+      className="overflow-hidden flex flex-col w-full shadow-md border border-border bg-primary-foreground"
+    >
       {/* Project Image */}
       <div className="relative group overflow-hidden">
-        <img
+        <Image
           src={imageSrc}
           alt={title}
           className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+          width={1920}
+          height={1080}
         />
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-hover:bg-black/50 transition-opacity duration-300 flex items-center justify-center">
           <div className="flex gap-4">
@@ -65,11 +79,10 @@ const ProjectCard = ({
 
         {/* Tags */}
         <div className="flex items-center gap-2 flex-wrap">
-          {tags.map((tag, tagIndex) => (
+          {tags.map((tag: string, tagIndex: number) => (
             <Badge
               key={tagIndex}
-              variant="outline"
-              className="font-normal"
+              className="font-normal text-sm text-secondary border border-border bg-primary-foreground hover:bg-primary-foreground transition-colors"
             >
               {tag}
             </Badge>

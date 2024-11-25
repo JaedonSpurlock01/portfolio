@@ -1,16 +1,5 @@
 import { CodeXml } from "lucide-react";
 import React from "react";
-import {
-  ModalClose,
-  ModalContent,
-  ModalDescription,
-  ModalFooter,
-  ModalHeader,
-  ModalRoot,
-  ModalTitle,
-  ModalTrigger,
-} from "./ui/modal";
-import { Button } from "./ui/button";
 import ProjectCard from "./ui/project-card";
 import { projects } from "@/data/data";
 

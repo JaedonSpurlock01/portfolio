@@ -12,7 +12,7 @@ export default function Leadership() {
       {leadership.map((leadership) => (
         <div
           key={leadership.club}
-          className="flex flex-col gap-2 mt-4 border-l-4 pl-4"
+          className="flex flex-col gap-2 mt-4 border-l-4 pl-4 hover:border-primary transition-colors"
         >
           <p>{leadership.club}</p>
           <p className="text-secondary text-sm">{leadership.position}</p>

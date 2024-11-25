@@ -9,12 +9,23 @@ export default function Navigation() {
   return (
     <header className="max-content-width">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl">{info.name}</h1>
+        <Link href="/">
+          <h1 className="text-2xl">{info.name}</h1>
+        </Link>
 
         <nav className="flex gap-4 items-center text-lg">
-          <Link href="/">blog</Link>
-          <Link href="/">projects</Link>
-          <Link href="/">visitors</Link>
+          <Link
+            href="/blog"
+            className="text-secondary hover:text-secondary/60 transition-colors"
+          >
+            blog
+          </Link>
+          <Link
+            href="/visitors"
+            className="text-secondary hover:text-secondary/60 transition-colors"
+          >
+            visitors
+          </Link>
           <ThemeToggle />
         </nav>
       </div>

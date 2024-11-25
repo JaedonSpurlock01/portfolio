@@ -2,9 +2,9 @@ import Education from "@/components/education";
 import Experience from "@/components/experience";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import Leadership from "@/components/leadership";
 import Navigation from "@/components/navigation";
 import Projects from "@/components/projects";
+import RecentPosts from "@/components/recent-posts";
 import DashedLine from "@/components/ui/dashed-line";
 
 export default function Home() {
@@ -19,10 +19,10 @@ export default function Home() {
         <Experience />
         <DashedLine orientation="horizontal" className="max-content-width" />
         <Education />
-        {/* <DashedLine orientation="horizontal" className="max-content-width" />
-        <Leadership /> */}
         <DashedLine orientation="horizontal" className="max-content-width" />
         <Projects />
+        <DashedLine orientation="horizontal" className="max-content-width" />
+        <RecentPosts />
       </div>
 
       <Footer />
