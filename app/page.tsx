@@ -3,8 +3,8 @@ import Experience from "@/components/experience";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Navigation from "@/components/navigation";
+import Posts from "@/components/posts";
 import Projects from "@/components/projects";
-import RecentPosts from "@/components/recent-posts";
 import DashedLine from "@/components/ui/dashed-line";
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
         <DashedLine orientation="horizontal" className="max-content-width" />
         <Projects />
         <DashedLine orientation="horizontal" className="max-content-width" />
-        <RecentPosts />
+        <Posts getLatestBlogs={true} />
       </div>
 
       <Footer />

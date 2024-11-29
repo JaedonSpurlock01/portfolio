@@ -63,6 +63,8 @@ export const LocationMap = () => {
       <Badge className="absolute top-4 left-4 bg-primary-foreground text-secondary">
         <p className="text-xs">Oceanside, CA</p>
       </Badge>
+
+      {/* LINK */}
     </div>
   );
 };

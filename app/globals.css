@@ -85,17 +85,34 @@ body {
 }
 
 .max-content-width {
-  @apply w-full sm:max-w-[90%] md:max-w-[700px]
+  @apply w-full sm:max-w-[90%] md:max-w-[700px];
 }
 
 .page-layout {
   @apply flex flex-col pt-10 pb-28 md:pt-28 gap-16 px-4 lg:px-0;
 }
 
-.mapboxgl-ctrl{
+.mapboxgl-ctrl {
   display: none !important;
 }
 
 html {
   scroll-behavior: smooth !important;
+}
+
+.scroll-snap {
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-snap > * {
+  scroll-snap-align: start;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
 }

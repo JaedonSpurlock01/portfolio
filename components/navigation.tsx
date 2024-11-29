@@ -15,7 +15,7 @@ export default function Navigation() {
 
         <nav className="flex gap-4 items-center text-lg">
           <Link
-            href="/blog"
+            href="/blogs"
             className="text-secondary hover:text-secondary/60 transition-colors"
           >
             blog

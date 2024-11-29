@@ -5,7 +5,7 @@ import { projects } from "@/data/data";
 
 export default function Projects() {
   return (
-    <div className="max-content-width">
+    <div className="max-content-width overflow-hidden">
       <span className="flex gap-2 items-center text-primary">
         <CodeXml /> Projects
       </span>

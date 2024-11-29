@@ -17,7 +17,7 @@ export default function Experience() {
         >
           <span className="flex gap-2 items-center">
             <p>{work.company}</p>
-            <Badge className="bg-primary-foreground text-secondary">
+            <Badge className="bg-primary-foreground text-secondary hover:bg-primary-foreground">
               {work.date}
             </Badge>
           </span>

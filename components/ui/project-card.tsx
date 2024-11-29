@@ -19,7 +19,7 @@ const ProjectCard = ({
 }: {
   title: string;
   description: string;
-  websiteUrl?: string;
+  websiteUrl?: string | null;
   githubUrl?: string;
   imageSrc: string;
   tags: string[];

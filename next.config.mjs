@@ -1,4 +1,6 @@
 import createMDX from "@next/mdx";
+import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 
 /** @type {import('next').NextConfig} */
@@ -10,7 +12,16 @@ const nextConfig = {
 
 const withMDX = createMDX({
   options: {
-    rehypePlugins: [],
+    rehypePlugins: [rehypeSlug, [
+      rehypeAutolinkHeadings,
+      {
+        behavior: "wrap",
+        properties: {
+          className: ["subheading-anchor"],
+          ariaLabel: "Link to section",
+        },
+      },
+    ],],
   },
 });
 

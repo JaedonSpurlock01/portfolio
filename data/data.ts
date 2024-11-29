@@ -145,4 +145,4 @@ export const projects = [
       "SDL API",
     ],
   },
-] as const;
+]
