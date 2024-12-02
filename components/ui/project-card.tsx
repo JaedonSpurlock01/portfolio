@@ -35,7 +35,7 @@ const ProjectCard = ({
         <Image
           src={imageSrc}
           alt={title}
-          className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
           width={1920}
           height={1080}
         />
@@ -65,9 +65,9 @@ const ProjectCard = ({
         </div>
       </div>
 
-      <CardContent className="space-y-4 mt-6 flex-grow flex flex-col">
+      <CardContent className="px-3 mt-2 flex-grow flex flex-col">
         <div className="flex flex-col justify-between">
-          <CardTitle className="text-xl font-bold text-primary">
+          <CardTitle className="text-lg font-bold text-primary">
             {title}
           </CardTitle>
         </div>

@@ -44,13 +44,15 @@ export const leadership = [
     club: "Robotics Club",
     position: "Software Lead",
     location: "CSUSM",
-    description: "Current software lead in rover development, robotcar platforms, and autonomous navigation",
+    description:
+      "Current software lead in rover development, robotcar platforms, and autonomous navigation",
   },
   {
     club: "Google Developer Student Club",
     position: "Incoming President",
     location: "CSUSM",
-    description: "Current software lead and incoming president for GDSC, leading the development of hands-on university-wide projects",
+    description:
+      "Current software lead and incoming president for GDSC, leading the development of hands-on university-wide projects",
   },
 ] as const;
 
@@ -95,7 +97,7 @@ export const projects = [
   {
     title: "Routify",
     description:
-      "A city pathfinding visualizer website",
+      "City pathfinding visualizer website used to understand pathfinding algorithms",
     websiteUrl: "https://www.routify.cc",
     githubUrl: "https://www.github.com/jaedonspurlock01/routify",
     imageSrc: "/projects/routify.gif",
@@ -109,9 +111,8 @@ export const projects = [
     ],
   },
   {
-    title: "GDSC Student platform",
-    description:
-      "Developing technical interview & project prep platform for students at CSUSM",
+    title: "GDSC Website",
+    description: "Developer club website for GDSC @ CSUSM",
     websiteUrl: "https://github.com/JaedonSpurlock01/robotcar",
     githubUrl: "https://github.com/JaedonSpurlock01/robotcar",
     imageSrc: "/projects/gdscweb.png",
@@ -121,28 +122,27 @@ export const projects = [
   {
     title: "University Rover",
     description:
-      "Assembly and software development of the unversity-wide rover platform",
+      "Assembly and software development of the unversity rover platform",
     websiteUrl: null,
     githubUrl: "",
     imageSrc: "/projects/rover.jpg",
     date: "Oct 2024 - Present",
     tags: [
-      "ROS2", "Python", "Raspberry PI", "Jetson Nano", "Autonomous Systems",
+      "ROS2",
+      "Python",
+      "Raspberry PI",
+      "Jetson Nano",
+      "Autonomous Systems",
     ],
   },
   {
     title: "Robotic Car Platform",
     description:
-      "Assembly and software development of a remote-controlled 4-wheeled robotic car",
+      "Software development of remote-controlled 4-wheeled robotic car",
     websiteUrl: null,
     githubUrl: "https://github.com/JaedonSpurlock01/robotcar",
     imageSrc: "/projects/robotcar.webp",
     date: "April 2024 - May 2024",
-    tags: [
-      "C++",
-      "ROS",
-      "Raspberry PI",
-      "SDL API",
-    ],
+    tags: ["C++", "ROS", "Raspberry PI", "SDL API"],
   },
-]
+];
