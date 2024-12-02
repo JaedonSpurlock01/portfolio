@@ -28,7 +28,7 @@ const ProjectCard = ({
   return (
     <Card
       key={date}
-      className="overflow-hidden flex flex-col w-full shadow-md border border-border bg-primary-foreground"
+      className="overflow-hidden flex flex-col w-full border border-border bg-primary-foreground"
     >
       {/* Project Image */}
       <div className="relative group overflow-hidden">
@@ -78,7 +78,7 @@ const ProjectCard = ({
         </CardDescription>
 
         {/* Tags */}
-        <div className="flex items-center gap-2 flex-wrap">
+        {/* <div className="flex items-center gap-2 flex-wrap">
           {tags.map((tag: string, tagIndex: number) => (
             <Badge
               key={tagIndex}
@@ -87,7 +87,7 @@ const ProjectCard = ({
               {tag}
             </Badge>
           ))}
-        </div>
+        </div> */}
       </CardContent>
     </Card>
   );

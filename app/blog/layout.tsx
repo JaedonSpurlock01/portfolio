@@ -1,11 +1,13 @@
-import Comments from "@/components/comments";
+"use server";
+
 import Footer from "@/components/footer";
-import BlogInfo from "@/components/markdown/blog-info";
+import BlogContent from "@/components/markdown/blog-content";
 import Navigation from "@/components/navigation";
 import DashedLine from "@/components/ui/dashed-line";
 import { getBlogBySlug } from "@/lib/get-blogs";
 import { headers } from "next/headers";
-import Image from "next/image";
+import { notFound } from "next/navigation";
+import { Suspense } from "react";
 
 export default async function Layout({
   children,
@@ -14,33 +16,21 @@ export default async function Layout({
 }) {
   const slug = headers().get("x-next-blog-slug") as string;
   const blog = await getBlogBySlug(slug);
-  const { metadata } = blog;
-  const image = metadata.image;
+
+  if (!blog) {
+    notFound();
+  }
+
+  blog.component = undefined;
 
   return (
     <div className="font-[family-name:var(--font-geist-sans)] page-layout h-full justify-between">
       <div className="flex flex-col h-full items-center gap-8">
         <Navigation />
         <DashedLine orientation="horizontal" className="max-content-width" />
-        <article className="max-content-width flex flex-col gap-8">
-          {image && (
-            <div className="flex max-h-[60vh] justify-center">
-              <Image
-                src={image}
-                alt={String(metadata.title)}
-                width={1200}
-                height={630}
-                className="rounded-md object-scale-down"
-              />
-            </div>
-          )}
-          <BlogInfo blog={blog} />
-          <DashedLine orientation="horizontal" />
-          <div className="prose dark:prose-invert prose-code:before:hidden prose-code:after:hidden prose-a:no-underline prose-headings:text-xl prose-p:text-secondary max-w-none">
-            {children}
-          </div>
-        </article>
-        <Comments />
+        <Suspense fallback={<div>Loading…</div>}>
+          <BlogContent blog={blog}>{children}</BlogContent>
+        </Suspense>
       </div>
       <Footer />
     </div>

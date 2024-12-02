@@ -1,16 +1,25 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import "@theme-toggles/react/css/Expand.css";
 import { Expand } from "@theme-toggles/react";
 import { useTheme } from "next-themes";
 
 export default function ThemeToggle() {
-  const { setTheme, theme } = useTheme();
+  const { setTheme, theme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleClick = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
+    setTheme(resolvedTheme === "light" ? "dark" : "light");
   };
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className="hover:opacity-70 mt-1 transition-all">
@@ -18,7 +27,7 @@ export default function ThemeToggle() {
       <Expand
         duration={750}
         toggle={handleClick}
-        toggled={theme === "dark"}
+        toggled={resolvedTheme === "dark"}
         className="p-1 text-xl transition-all"
       />
     </div>

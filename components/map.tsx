@@ -51,7 +51,11 @@ export const LocationMap = () => {
           longitude={-117.3873015907678}
           anchor="center"
         >
-          <PulsatingDot />
+          <PulsatingDot
+            className="w-6 h-6"
+            coreDotClassName="inset-1/4 bg-green-500"
+            outerDotClassName="bg-green-500"
+          />
         </Marker>
       </Map>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />

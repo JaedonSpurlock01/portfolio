@@ -31,16 +31,17 @@ export default async function Posts({
         const date = String(metadata.date);
 
         return (
-          <Link
+          <a
+            // Not using next component since layout is not re-rendering
             key={title}
             href={"/blog/" + blog.slug}
-            className="flex flex-col overflow-hidden rounded shadow-lg transition-shadow duration-200 hover:shadow-xl"
+            className="flex flex-col overflow-hidden"
           >
             <div className="flex flex-col gap-2 mt-4 border-l-4 pl-4 hover:border-primary transition-colors">
               <p>{title}</p>
               <p className="text-secondary text-sm">{date}</p>
             </div>
-          </Link>
+          </a>
         );
       })}
     </div>

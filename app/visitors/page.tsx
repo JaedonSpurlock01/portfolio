@@ -1,7 +1,9 @@
+"use client";
+
 import { CollaborativeApp } from "@/components/collaborative-app";
 import Footer from "@/components/footer";
 import Navigation from "@/components/navigation";
-import { Room } from "@/components/room";
+import { VisitorRoom as Room } from "@/components/room";
 import DashedLine from "@/components/ui/dashed-line";
 
 export default function Visitors() {
@@ -10,6 +12,7 @@ export default function Visitors() {
       <div className="flex flex-col h-full items-center gap-8">
         <Navigation />
         <DashedLine orientation="horizontal" className="max-content-width" />
+
         <Room>
           <CollaborativeApp />
         </Room>

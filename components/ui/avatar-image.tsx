@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const AvatarImage = () => {
@@ -27,10 +28,12 @@ const AvatarImage = () => {
 
           {/* Image container */}
           <div className="absolute inset-0 rounded-full bg-neutral-900 z-10">
-            <img
+            <Image
               src="/jaedon.jpg"
               alt="Jaedon Spurlock"
-              className="w-full h-full rounded-full object-cover opacity-80"
+              className="w-full h-full rounded-full object-cover opacity-80 scale-95"
+              width={200}
+              height={200}
             />
           </div>
         </div>

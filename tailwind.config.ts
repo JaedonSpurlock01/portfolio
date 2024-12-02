@@ -60,6 +60,7 @@ const config: Config = {
         "spin-slow":
           "rotating-highlight 3s cubic-bezier(0.65, 0, 0.35, 1) infinite",
         twinkle: "twinkle 10s infinite",
+        "ping-slow": "ping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
       },
       keyframes: {
         "rotating-highlight": {
@@ -90,6 +91,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };
 export default config;

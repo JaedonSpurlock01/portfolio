@@ -1,0 +1,83 @@
+export const metadata = {
+  title: "Another blog",
+  description: `Time to dive deeper into what really matters`,
+  date: "Nov 30, 2024",
+  authors: ["Jaedon"],
+};
+export const metadata_readingTime = "8 mins"
+
+Here's a single-file MDX content example that includes everything within one file:
+
+```mdx
+# Welcome to My MDX Page!
+
+This is a simple example of an **MDX** page that combines markdown with JSX components. MDX allows you to use markdown syntax alongside React components for a richer content experience.
+
+## Section 1: Introduction
+
+MDX is an excellent way to create content-rich pages. You can add headings, lists, links, and more:
+
+- Item 1
+- Item 2
+- Item 3
+
+You can even add inline code:
+
+```javascript
+const greeting = "Hello, world!";
+console.log(greeting);
+```
+
+## Section 2: Interactive Components
+
+Here is a simple interactive counter component:
+
+```jsx
+import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Current count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+<Counter />
+```
+
+## Section 3: Advanced Topics
+
+### 3.1 Nested Lists
+
+You can even create nested lists within your content:
+
+1. First level
+   - Second level
+     - Third level
+2. Another first-level item
+
+### 3.2 Custom Component Example
+
+Here is an example of a custom component being used in MDX:
+
+```jsx
+import { Card } from './components/Card';
+
+<Card title="This is a card" content="This is some content inside the card component." />
+```
+
+## Section 4: Conclusion
+
+MDX is a powerful tool for integrating React components into markdown. It provides flexibility and allows you to create dynamic content with ease.
+
+> "MDX makes React components part of your markdown."
+
+---
+Thanks for checking out this example! Happy coding!
+```
+
+This file includes headings, markdown, inline code, React components, and JSX code examples—all in a single MDX file. You can use this as a test file to see how MDX handles various types of content.

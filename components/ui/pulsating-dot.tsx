@@ -1,24 +1,27 @@
-const PulsatingDot = () => {
+import { cn } from "@/lib/utils";
+
+interface PulsatingDotProps {
+  className?: string;
+  coreDotClassName?: string;
+  outerDotClassName?: string;
+}
+
+const PulsatingDot = ({
+  className,
+  coreDotClassName,
+  outerDotClassName,
+}: PulsatingDotProps) => {
   return (
-    <div className="relative w-6 h-6">
+    <div className={cn("relative", className)}>
       {/* Core dot */}
-      <div className="absolute inset-1/4 rounded-full bg-green-500" />
+      <div className={cn("absolute rounded-full", coreDotClassName)} />
 
       {/* Pulsing rings */}
-      <div className="absolute inset-0 rounded-full bg-green-500 opacity-75 animate-ping" />
       <div
-        className="absolute inset-0 rounded-full bg-green-500 opacity-50"
-        style={{
-          animation: "ping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
-          animationDelay: "1s",
-        }}
-      />
-      <div
-        className="absolute inset-0 rounded-full bg-green-500 opacity-25"
-        style={{
-          animation: "ping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
-          animationDelay: "1s",
-        }}
+        className={cn(
+          "absolute inset-0 rounded-full opacity-75 animate-ping-slow",
+          outerDotClassName
+        )}
       />
     </div>
   );
