@@ -3,6 +3,7 @@
 import { CollaborativeApp } from "@/components/collaborative-app";
 import Footer from "@/components/footer";
 import Navigation from "@/components/navigation";
+import Playground from "@/components/playground";
 import { VisitorRoom as Room } from "@/components/room";
 import DashedLine from "@/components/ui/dashed-line";
 
@@ -16,6 +17,9 @@ export default function Visitors() {
         <Room>
           <CollaborativeApp />
         </Room>
+
+        <DashedLine orientation="horizontal" className="max-content-width" />
+        <Playground />
       </div>
 
       <Footer />

@@ -41,7 +41,7 @@ body {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 0 0% 3.9%;
+    --background: 0 0% 6%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -89,7 +89,7 @@ body {
 }
 
 .page-layout {
-  @apply flex flex-col pt-10 pb-28 md:pt-28 gap-16 px-4 lg:px-0;
+  @apply flex flex-col pt-10 pb-28 gap-16 px-4 lg:px-0;
 }
 
 .mapboxgl-ctrl {

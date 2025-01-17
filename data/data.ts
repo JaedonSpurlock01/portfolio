@@ -1,4 +1,4 @@
-export const lastUpdated = "November 23, 2024";
+export const lastUpdated = "Janurary 9, 2025";
 
 export const socials = {
   email: "jaedonaspurlock@outlook.com",
@@ -69,8 +69,8 @@ export const education = [
 ] as const;
 
 export const skills = {
-  languages: ["Python", "C++", "TypeScript", "CSS", "HTML", "JSON", "Yaml"],
-  technologies: ["React", "React Native", "NodeJS", "ROS2"],
+  languages: ["Python", "C++", "TypeScript", "CSS", "HTML", "JSON", "Yaml", "GoLang"],
+  frameworks: ["React", "React Native", "NodeJS", "ROS2", "Express", "NextJS"],
   tools: [
     "AWS",
     "Google Cloud",
@@ -81,16 +81,7 @@ export const skills = {
     "GitHub",
     "Postman",
     "PostgreSQL",
-  ],
-  practices: [
-    "Agile",
-    "Test-Driven-Development",
-    "Refactoring",
-    "Team Retrospectives",
-    "Version Control",
-    "CI/CD pipelines",
-    "Code Review",
-  ],
+  ]
 } as const;
 
 export const projects = [
@@ -109,6 +100,12 @@ export const projects = [
       "Overpass API",
       "Amazon S3",
     ],
+    features: [
+      "Search any city in the world",
+      "Choose between DFS, BFS, A*, and Dijkstra algorithms",
+      "Customize the color scheme",
+      "Change animation speed realtime",
+    ]
   },
   {
     title: "GDSC Website",
@@ -118,6 +115,11 @@ export const projects = [
     imageSrc: "/projects/gdscweb.png",
     date: "Jun 2024 - Present",
     tags: ["TypeScript", "React", "NextJS", "MagicUI", "ShadcnUI"],
+    features: [
+      "Create, edit, and delete events",
+      "Create, edit, and delete members",
+      "Create, edit, and delete projects",
+    ]
   },
   {
     title: "University Rover",
@@ -134,6 +136,11 @@ export const projects = [
       "Jetson Nano",
       "Autonomous Systems",
     ],
+    features: [
+      "Autonomous navigation",
+      "Remote control through ssh terminal",
+      "Navigate across different terrains",
+    ]
   },
   {
     title: "Robotic Car Platform",
@@ -144,5 +151,47 @@ export const projects = [
     imageSrc: "/projects/robotcar.webp",
     date: "April 2024 - May 2024",
     tags: ["C++", "ROS", "Raspberry PI", "SDL API"],
+    features: [
+      "Bluetooth control with controller",
+    ]
   },
+];
+
+export const organizations = [
+  {
+    title: "Project-Based Infrastructure",
+    description:
+      "Secured $100k+ in funding across different organizations to create and sustain university-wide infrastructure",
+    imageSrc: "/clubs/infrastructure.png",
+  },
+  {
+    title: "Robotics Club",
+    description:
+      "Increased membership by 150% by engaging over 15+ students in ROS2 related projects",
+    imageSrc: "/clubs/robotics.png",
+  },
+  {
+    title: "Google Developer Student Club",
+    description:
+      "Onboarded 20+ new students by facilitating hands-on technical projects and skills such as ReactJS, TypeScript, and Python",
+    imageSrc: "/clubs/gdsc.png",
+  },
+  {
+    title: "Leetweb Club",
+    description:
+      "Organized weekly leetcode coding problems for students to improve their interviewing skills and problem-solving abilities",
+    imageSrc: "/clubs/leetweb.PNG",
+  },
+  {
+    title: "Society of Hispanic Professional Engineers Club",
+    description:
+      "Supported and participated in SHPE-related events, including the SHPE National Convention",
+    imageSrc: "/clubs/shpe.png",
+  },
+  // {
+  //   title: "Engineering Spaces",
+  //   description:
+  //     "Supported the acquirement of new engineering spaces on campus, providing a conducive environment for engineers to learn and grow",
+  //   imageSrc: "/projects/routify.gif",
+  // },
 ];

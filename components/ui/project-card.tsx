@@ -1,95 +1,58 @@
-import {
-  Card,
-  CardContent,
-  CardTitle,
-  CardDescription,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
+import { projects } from "@/data/data";
+import { motion } from "framer-motion";
+import { ArrowUpRight, MoveUpRight, Package, PackageOpen } from "lucide-react";
 
 const ProjectCard = ({
-  title,
-  description,
-  websiteUrl,
-  githubUrl,
-  imageSrc,
-  tags,
-  date,
+  id,
+  setActive,
+  card,
 }: {
-  title: string;
-  description: string;
-  websiteUrl?: string | null;
-  githubUrl?: string;
-  imageSrc: string;
-  tags: string[];
-  date: string;
+  card: (typeof projects)[number];
+  id: string;
+  setActive: (card: (typeof projects)[number]) => void;
 }) => {
   return (
-    <Card
-      key={date}
-      className="overflow-hidden flex flex-col w-full border border-border bg-primary-foreground"
+    <motion.div
+      layoutId={`card-${card.title}-${id}`}
+      key={card.title}
+      onClick={() => setActive(card)}
+      className="group pb-2 hover:bg-secondary/10 border border-border transition-colors overflow-hidden flex flex-col w-full bg-primary-foreground rounded-xl text-card-foreground cursor-pointer"
     >
-      {/* Project Image */}
-      <div className="relative group overflow-hidden">
-        <Image
-          src={imageSrc}
-          alt={title}
-          className="w-full h-32 object-cover transition-transform duration-300 group-hover:scale-105"
-          width={1920}
-          height={1080}
-        />
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-hover:bg-black/50 transition-opacity duration-300 flex items-center justify-center">
-          <div className="flex gap-4">
-            {githubUrl && (
-              <a
-                href={githubUrl}
-                className="bg-white/10 backdrop-blur-sm p-2 rounded-full transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Github className="w-6 h-6 text-white" />
-              </a>
-            )}
-            {websiteUrl && (
-              <a
-                href={websiteUrl}
-                className="bg-white/10 backdrop-blur-sm p-2 rounded-full transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <ExternalLink className="w-6 h-6 text-white" />
-              </a>
-            )}
+      <div className="flex gap-2 flex-col w-full">
+        <motion.div layoutId={`image-${card.title}-${id}`}>
+          <Image
+            src={card.imageSrc}
+            alt={card.title}
+            className="w-full h-32 object-top object-cover transition-transform duration-300 group-hover:scale-105"
+            width={1920}
+            height={1080}
+          />
+        </motion.div>
+        <div className="p-2 flex flex-col">
+          <div className="flex items-center justify-between">
+            <motion.h3
+              layoutId={`title-${card.title}-${id}`}
+              className="text-sm font-bold text-primary"
+            >
+              {card.title}
+            </motion.h3>
+
+            <ArrowUpRight
+              size={16}
+              className="group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-transform text-secondary"
+            />
           </div>
+
+          <motion.p
+            layoutId={`description-${card.description}-${id}`}
+            className="text-secondary line-clamp-3 text-sm"
+          >
+            {card.description}
+          </motion.p>
         </div>
       </div>
-
-      <CardContent className="px-3 mt-2 flex-grow flex flex-col">
-        <div className="flex flex-col justify-between">
-          <CardTitle className="text-lg font-bold text-primary">
-            {title}
-          </CardTitle>
-        </div>
-
-        {/* Description */}
-        <CardDescription className="text-secondary flex-grow line-clamp-3">
-          {description}
-        </CardDescription>
-
-        {/* Tags */}
-        {/* <div className="flex items-center gap-2 flex-wrap">
-          {tags.map((tag: string, tagIndex: number) => (
-            <Badge
-              key={tagIndex}
-              className="font-normal text-sm text-secondary border border-border bg-primary-foreground hover:bg-primary-foreground transition-colors"
-            >
-              {tag}
-            </Badge>
-          ))}
-        </div> */}
-      </CardContent>
-    </Card>
+    </motion.div>
   );
 };
 
