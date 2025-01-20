@@ -24,14 +24,14 @@ export default async function Widgets() {
                     />
                   </div>
                   <div className="flex-1">
-                    <h2 className="font-semibold overflow-ellipsis line-clamp-1">
+                    <h2 className="font-semibold text-primary overflow-ellipsis line-clamp-1">
                       Engineering In Plain Sight
                     </h2>
                     <p className="text-secondary text-sm">Grady Hillhouse</p>
 
                     <div className="mt-4">
-                      <div className="relative w-full h-1 bg-gray-800 rounded">
-                        <div className="absolute h-full w-[35%] bg-white rounded"></div>
+                      <div className="relative w-full h-1 bg-primary/10 rounded">
+                        <div className="absolute h-full w-[35%] bg-primary rounded"></div>
                       </div>
                       <p className="flex justify-between mt-1 text-xs text-secondary">
                         Page 142 of 512
@@ -58,15 +58,15 @@ export default async function Widgets() {
                     />
                   </div>
                   <div className="flex-1">
-                    <h2 className="font-semibold">Hope</h2>
+                    <h2 className="font-semibold text-primary">Hope</h2>
                     <p className="text-secondary text-sm">Roar</p>
                   </div>
                   <div className="text-secondary">•••••••</div>
                 </div>
 
                 <div className="mt-4">
-                  <div className="relative w-full h-1 bg-gray-800 rounded">
-                    <div className="absolute h-full w-[3%] bg-white rounded"></div>
+                  <div className="relative w-full h-1 bg-primary/10 rounded">
+                    <div className="absolute h-full w-[3%] bg-primary rounded"></div>
                   </div>
                   <div className="flex justify-between mt-1 text-xs text-gray-400">
                     <span>00:06</span>
@@ -75,14 +75,14 @@ export default async function Widgets() {
                 </div>
 
                 <div className="flex justify-center items-center gap-8">
-                  <button className="text-primary hover:text-gray-300 transition">
-                    <SkipBack size={20} stroke="white" />
+                  <button className="text-secondary hover:text-primary transition">
+                    <SkipBack size={20} />
                   </button>
-                  <button className="text-primary hover:text-gray-300 transition">
-                    <Play size={20} stroke="white" />
+                  <button className="text-secondary hover:text-primary transition">
+                    <Play size={20} />
                   </button>
-                  <button className="text-primary hover:text-gray-300 transition">
-                    <SkipForward size={20} stroke="white" />
+                  <button className="text-secondary hover:text-primary transition">
+                    <SkipForward size={20} />
                   </button>
                 </div>
               </CardContent>

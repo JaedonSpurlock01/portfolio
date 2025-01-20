@@ -2,6 +2,7 @@
 
 import {
   BookImage,
+  Box,
   Calendar,
   Calendar1,
   Guitar,
@@ -39,7 +40,9 @@ export const AboutMe = () => {
 
   return (
     <div className="flex flex-col gap-2">
-      <span className="flex gap-2 items-center text-primary">Hey There 👋🏻</span>
+      <span className="flex gap-2 items-center text-primary">
+        <Box /> Hey There
+      </span>
       <p className="mt-2 text-secondary leading-relaxed">
         I’m Jaedon Spurlock, a junior in Software Engineering student at CSUSM.
         Originally from a small town in Ohio, I moved to California in pursuit

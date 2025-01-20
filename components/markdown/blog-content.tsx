@@ -42,7 +42,7 @@ export default function BlogContent({
           {children}
         </div>
       </article>
-      <Comments roomId={blog.slug} />
+      {/* <Comments roomId={blog.slug} /> */}
     </>
   );
 }

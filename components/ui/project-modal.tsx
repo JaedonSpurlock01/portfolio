@@ -4,6 +4,8 @@ import { projects } from "@/data/data";
 import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 import { useOutsideClick } from "@/hooks/use-outside-click";
+import DashedLine from "./dashed-line";
+import { Badge } from "./badge";
 
 export const ProjectModal = ({
   active,
@@ -41,7 +43,7 @@ export const ProjectModal = ({
                   duration: 0.05,
                 },
               }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+              className="flex absolute top-2 right-2 items-center justify-center bg-primary-foreground rounded-lg h-6 w-6"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
@@ -73,9 +75,12 @@ export const ProjectModal = ({
                   >
                     {active.description}
                   </motion.p>
+
+                  <DashedLine orientation="horizontal" className="w-full" />
                 </div>
               </div>
-              <div className="pt-4 relative px-4">
+
+              <div className="relative px-4">
                 <motion.div
                   layout
                   initial={{ opacity: 0 }}
@@ -86,6 +91,28 @@ export const ProjectModal = ({
                   <p className="text-primary font-medium text-base">Features</p>
                   {active.features.map((feature, index) => (
                     <li key={index}>{feature}</li>
+                  ))}
+                </motion.div>
+              </div>
+
+              <div className="relative px-4 pt-4">
+                <motion.div
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="text-sm text-secondary overflow-auto"
+                >
+                  <p className="text-primary font-medium text-base">
+                    Technologies
+                  </p>
+                  {active.tags.map((tag, index) => (
+                    <Badge
+                      className="m-1 text-secondary dark:bg-secondary/10"
+                      variant="outline"
+                    >
+                      {tag}
+                    </Badge>
                   ))}
                 </motion.div>
               </div>
@@ -153,7 +180,7 @@ export const CloseIcon = () => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-4 w-4 text-black"
+      className="h-4 w-4 text-secondary hover:text-primary transition-colors"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M18 6l-12 12" />

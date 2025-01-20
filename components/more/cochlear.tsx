@@ -9,6 +9,7 @@ import {
 } from "../ui/carousel";
 import Image from "next/image";
 import { Badge } from "../ui/badge";
+import Link from "next/link";
 
 const cochlearItems = [
   {
@@ -43,46 +44,32 @@ const cochlearItems = [
 
 export const Cochlear = () => {
   return (
-    <Card className="bg-primary-foreground aspect-square rounded-xl">
-      <CardContent className="flex-1 relative pt-2 pb-0">
-        <Carousel className="h-full">
-          <CarouselContent className="h-full">
-            {cochlearItems.map((item) => (
-              <CarouselItem key={item.key}>
-                <div className="h-full flex flex-col items-center justify-center gap-4">
-                  <span className="flex gap-2 items-center text-secondary">
-                    <p>{item.name}</p>
-                  </span>
-                  <Image
-                    src={item.imageSrc}
-                    alt={`${item.name} Image`}
-                    width={100}
-                    height={100}
-                  />
-                  <Badge variant="outline" className="gap-1.5">
-                    {item.active ? (
-                      <span
-                        className="size-1.5 rounded-full bg-emerald-500"
-                        aria-hidden="true"
-                      />
-                    ) : (
-                      <span
-                        className="size-1.5 rounded-full bg-red-500"
-                        aria-hidden="true"
-                      />
-                    )}
-                    {item.time}
-                  </Badge>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="absolute bottom-0 w-full flex justify-between px-4 pb-4">
-            <CarouselPrevious className="relative translate-x-4 -translate-y-10" />
-            <CarouselNext className="relative -translate-x-4 -translate-y-10" />
-          </div>
-        </Carousel>
-      </CardContent>
-    </Card>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="col-span-1 rounded-xl px-12">
+        <Image
+          src="/cochlear/n7.png"
+          alt="Cochlear Implant"
+          width={500}
+          height={500}
+        />
+      </div>
+
+      <div className="col-span-1">
+        <p className="text-xl">Hearing Processors</p>
+        <p className="text-secondary mb-4">
+          Cochlear implants are a vital part of who I am. They allow me to
+          artificially process and understand hearing signals, almost identical
+          to human hearing.
+        </p>
+
+        <Link
+          href="https://www.mayoclinic.org/tests-procedures/cochlear-implants/about/pac-20385021"
+          target="_blank"
+          className="px-10 text-sm hover:text-secondary/60 transition-colors p-3 bg-primary-foreground border border-border rounded-lg"
+        >
+          Learn more
+        </Link>
+      </div>
+    </div>
   );
 };

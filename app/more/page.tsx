@@ -11,6 +11,7 @@ import Hiking from "@/components/more/hiking";
 import Github from "@/components/more/github";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Backpack, Book, Mountain } from "lucide-react";
+import { Cochlear } from "@/components/more/cochlear";
 
 export default function Home() {
   return (
@@ -96,12 +97,6 @@ export default function Home() {
                 value="tab-3"
                 className="text-base relative w-full justify-start rounded-none after:absolute after:inset-y-0 after:start-0 after:w-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:after:bg-primary"
               >
-                Journal
-              </TabsTrigger>
-              <TabsTrigger
-                value="tab-4"
-                className="text-base relative w-full justify-start rounded-none after:absolute after:inset-y-0 after:start-0 after:w-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:after:bg-primary"
-              >
                 Implants
               </TabsTrigger>
             </TabsList>
@@ -115,21 +110,14 @@ export default function Home() {
                 </p>
               </TabsContent>
               <TabsContent value="tab-3">
-                <p className="px-4 py-1.5 text-xs text-muted-foreground">
-                  Content for Tab 3
-                </p>
-              </TabsContent>
-              <TabsContent value="tab-4">
-                <p className="px-4 py-1.5 text-xs text-muted-foreground">
-                  Content for Tab 4
-                </p>
+                <Cochlear />
               </TabsContent>
             </div>
           </Tabs>
 
-          <DashedLine orientation="horizontal" className="w-full" />
+          {/* <DashedLine orientation="horizontal" className="w-full" />
 
-          <Github />
+          <Github /> */}
         </StaggerContainer>
       </div>
       <Footer />

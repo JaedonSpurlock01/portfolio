@@ -25,7 +25,7 @@ export const work = [
     date: "May 2025",
     imageSrc: "/welfie.png",
     href: "https://www.linkedin.com/company/welfie/",
-    description: "Incoming intern for the Rotary-Mission-Systems (RMS) team.",
+    description: "Incoming intern for the Rotary-Mission-Systems (RMS) team in Orlando, Florida. I interviewed for this position in-person at the SHPE convention center.",
   },
   {
     company: "Welfie",
@@ -35,7 +35,17 @@ export const work = [
     imageSrc: "/welfie.png",
     href: "https://www.linkedin.com/company/welfie/",
     description:
-      "Orchestrate development of cross-platform mobile app by using React Native, Expo, and NativeWind. Accelerate workflow efficiency by 30% by integrating developer documentation and agile methodologies. Led a team of 8 interns to establish web testing ecosystem . Build automated testing framework using Python and Selenium, enhancing test coverage by 70%. Deploy and manage a CI/CD pipeline on Bitbucket by using Google Cloud, Docker, and Linux configurations. Refactor, debug, and implement website production code.",
+      "Developed a cross-platform mental health app with React Native, improving workflows by 30% with documentation and agile methods. Led a team to create a Python and Selenium-based testing framework, boosting test coverage by 70%. Deployed CI/CD pipelines using Google Cloud, Docker, and Linux, while optimizing website production code.",
+  },
+  {
+    company: "CodeDay",
+    position: "Open Source Contributor",
+    location: "Remote",
+    date: "Oct 2023 - Nov 2023",
+    imageSrc: "",
+    href: "",
+    description:
+      "Improved reliability of an open-source project by implementing a test case with JavaScript and Mocha. Led a team of 3 to verify conversions from kWh to BTU energy units, resulting in increased confidence in data integrity.",
   },
 ] as const;
 
@@ -109,7 +119,7 @@ export const projects = [
   },
   {
     title: "GDSC Website",
-    description: "Developer club website for GDSC @ CSUSM",
+    description: "Student organization website for GDSC to learn and develop software engineering",
     websiteUrl: "https://github.com/JaedonSpurlock01/robotcar",
     githubUrl: "https://github.com/JaedonSpurlock01/robotcar",
     imageSrc: "/projects/gdscweb.png",

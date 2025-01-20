@@ -13,13 +13,13 @@ export default function Visitors() {
       <div className="flex flex-col h-full items-center gap-8">
         <Navigation />
         <DashedLine orientation="horizontal" className="max-content-width" />
-
-        <Room>
+        {/* <Room>
           <CollaborativeApp />
         </Room>
 
         <DashedLine orientation="horizontal" className="max-content-width" />
-        <Playground />
+        <Playground /> */}
+        Coming soon!
       </div>
 
       <Footer />

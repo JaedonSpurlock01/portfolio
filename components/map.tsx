@@ -39,7 +39,7 @@ export const LocationMap = () => {
         mapStyle={
           theme === "dark"
             ? "mapbox://styles/mapbox/dark-v11"
-            : "mapbox://styles/mapbox/light-v11"
+            : "mapbox://styles/mapbox/light-v9"
         }
         style={{ width: "100%", height: 250 }}
         scrollZoom={false}
@@ -61,14 +61,7 @@ export const LocationMap = () => {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
 
       {/* CLOCK */}
-      <Clock className="absolute top-4 right-4 bg-primary-foreground text-secondary" />
-
-      {/* LOCATION */}
-      <Badge className="absolute top-4 left-4 bg-primary-foreground text-secondary">
-        <p className="text-xs">Oceanside, CA</p>
-      </Badge>
-
-      {/* LINK */}
+      <Clock className="absolute top-4 right-4 bg-primary-foreground hover:bg-primary-foreground text-secondary" />
     </div>
   );
 };
