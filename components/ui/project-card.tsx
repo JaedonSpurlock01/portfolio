@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { projects } from "@/data/data";
 import { motion } from "framer-motion";
-import { ArrowUpRight, MoveUpRight, Package, PackageOpen } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const ProjectCard = ({
   id,

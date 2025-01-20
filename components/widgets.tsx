@@ -1,4 +1,4 @@
-import { AudioLines, Book, BookOpenText } from "lucide-react";
+import { AudioLines, BookOpenText } from "lucide-react";
 import React from "react";
 import StaggerContainer from "./ui/stagger-container";
 import { SkipBack, Play, SkipForward } from "lucide-react";

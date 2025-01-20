@@ -4,13 +4,8 @@ import ImageGallery from "@/components/image-gallery";
 import Navigation from "@/components/navigation";
 import DashedLine from "@/components/ui/dashed-line";
 import StaggerContainer from "@/components/ui/stagger-container";
-import Playground from "@/components/playground";
-import DreamJournaling from "@/components/dream-journaling";
-import Climbing from "@/components/more/climbing";
 import Hiking from "@/components/more/hiking";
-import Github from "@/components/more/github";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Backpack, Book, Mountain } from "lucide-react";
 import { Cochlear } from "@/components/more/cochlear";
 
 export default function Home() {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "../ui/card";
-import { Box, GitCommit, GithubIcon, Heart, Star } from "lucide-react";
+import { Box, GitCommit, Heart, Star } from "lucide-react";
 import { GitHubButton } from "../social-buttons";
 import { Button } from "../ui/button";
 import Image from "next/image";

@@ -1,27 +1,7 @@
 "use client";
 
-import {
-  BookImage,
-  Box,
-  Calendar,
-  Calendar1,
-  Guitar,
-  Info,
-  Music,
-} from "lucide-react";
+import { BookImage, Box, Calendar1, Music } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardTitle } from "../ui/card";
-import { BasicWeatherWidget } from "./weather-widget";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "../ui/carousel";
-import Image from "next/image";
-import { HomeMap } from "./home-map";
-import { Cochlear } from "./cochlear";
 
 export const AboutMe = () => {
   const birthDate = new Date("2004-03-31");

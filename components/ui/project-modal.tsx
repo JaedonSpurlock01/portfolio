@@ -99,6 +99,7 @@ export const ProjectModal = ({
                     <Badge
                       className="m-1 text-secondary dark:bg-secondary/10"
                       variant="outline"
+                      key={index}
                     >
                       {tag}
                     </Badge>

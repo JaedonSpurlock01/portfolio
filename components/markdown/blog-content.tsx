@@ -4,9 +4,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import BlogInfo from "@/components/markdown/blog-info";
 import DashedLine from "@/components/ui/dashed-line";
-import Comments from "@/components/comments";
 import { Blog } from "@/types/blog";
-import { useEffect } from "react";
 
 export default function BlogContent({
   blog,

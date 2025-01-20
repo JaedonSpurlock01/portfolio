@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
-import { Blocks, MapPin, UserRoundPlus } from "lucide-react";
+import { Blocks, MapPin } from "lucide-react";
 import { MapContainer, CircleMarker, LayerGroup } from "react-leaflet";
 import proj4 from "proj4";
 import DottedMap from "dotted-map/without-countries";

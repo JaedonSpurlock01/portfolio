@@ -5,7 +5,6 @@ import Map, { Marker, MapRef } from "react-map-gl";
 import { useTheme } from "next-themes";
 import PulsatingDot from "./ui/pulsating-dot";
 import Clock from "./ui/clock";
-import { Badge } from "./ui/badge";
 
 export const LocationMap = () => {
   const { theme } = useTheme();

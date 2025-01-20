@@ -1,46 +1,6 @@
 import React from "react";
-import { Card, CardContent } from "../ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "../ui/carousel";
 import Image from "next/image";
-import { Badge } from "../ui/badge";
 import Link from "next/link";
-
-const cochlearItems = [
-  {
-    key: 1,
-    name: "Nucleus 7",
-    imageSrc: "/cochlear/N7.png",
-    time: "2018 - Present",
-    active: true,
-  },
-  {
-    key: 2,
-    name: "Nucleus 6",
-    imageSrc: "/cochlear/N6.png",
-    time: "2015 - 2018",
-    active: false,
-  },
-  {
-    key: 3,
-    name: "Nucleus 5",
-    imageSrc: "/cochlear/N5.png",
-    time: "2013 - 2015",
-    active: false,
-  },
-  {
-    key: 4,
-    name: "Freedom",
-    imageSrc: "/cochlear/N5.png",
-    time: "2005 - 2013",
-    active: false,
-  },
-];
 
 export const Cochlear = () => {
   return (
