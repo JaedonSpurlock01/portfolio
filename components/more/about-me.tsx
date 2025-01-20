@@ -61,17 +61,17 @@ export const AboutMe = () => {
         <div>
           <span className="flex gap-2 items-center mb-2 text-primary">
             <BookImage size={16} />
-            <p>Current Status</p>
+            <p>Occupation</p>
           </span>
-          <p className="text-secondary">Water</p>
+          <p className="text-secondary">Software Engineer</p>
         </div>
 
         <div>
           <span className="flex gap-2 items-center mb-2 text-primary">
             <BookImage size={16} />
-            <p>Favorite Shoes</p>
+            <p>Located in</p>
           </span>
-          <p className="text-secondary">Vivobarefoot</p>
+          <p className="text-secondary">Oceanside, CA</p>
         </div>
 
         <div>
@@ -83,7 +83,7 @@ export const AboutMe = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+      {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
         <div className="flex flex-col col-span-1 gap-4">
           <BasicWeatherWidget />
           <Cochlear />
@@ -91,7 +91,7 @@ export const AboutMe = () => {
         <div className="col-span-2 h-full">
           <HomeMap />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

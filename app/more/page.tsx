@@ -23,10 +23,8 @@ export default function Home() {
           <DashedLine orientation="horizontal" className="w-full" />
           <AboutMe />
           <DashedLine orientation="horizontal" className="w-full" />
-          <Github />
-          <DashedLine orientation="horizontal" className="w-full" />
 
-          <Tabs defaultValue="tab-1">
+          {/* <Tabs defaultValue="tab-1">
             <TabsList className="h-auto rounded-none border-b border-border bg-transparent p-0">
               <TabsTrigger
                 value="tab-1"
@@ -74,7 +72,64 @@ export default function Home() {
             <TabsContent value="tab-3">
               <Hiking />
             </TabsContent>
+          </Tabs> */}
+
+          <Tabs
+            defaultValue="tab-1"
+            orientation="vertical"
+            className="flex w-full gap-2"
+          >
+            <TabsList className="flex-col rounded-none border-l h-full border-border bg-transparent p-0">
+              <TabsTrigger
+                value="tab-1"
+                className="text-base relative w-full justify-start rounded-none after:absolute after:inset-y-0 after:start-0 after:w-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:after:bg-primary"
+              >
+                Hiking
+              </TabsTrigger>
+              <TabsTrigger
+                value="tab-2"
+                className="text-base relative w-full justify-start rounded-none after:absolute after:inset-y-0 after:start-0 after:w-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:after:bg-primary"
+              >
+                Climbing
+              </TabsTrigger>
+              <TabsTrigger
+                value="tab-3"
+                className="text-base relative w-full justify-start rounded-none after:absolute after:inset-y-0 after:start-0 after:w-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:after:bg-primary"
+              >
+                Journal
+              </TabsTrigger>
+              <TabsTrigger
+                value="tab-4"
+                className="text-base relative w-full justify-start rounded-none after:absolute after:inset-y-0 after:start-0 after:w-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:after:bg-primary"
+              >
+                Implants
+              </TabsTrigger>
+            </TabsList>
+            <div className="grow rounded-lg">
+              <TabsContent value="tab-1">
+                <Hiking />
+              </TabsContent>
+              <TabsContent value="tab-2">
+                <p className="px-4 py-1.5 text-xs text-muted-foreground">
+                  Content for Tab 2
+                </p>
+              </TabsContent>
+              <TabsContent value="tab-3">
+                <p className="px-4 py-1.5 text-xs text-muted-foreground">
+                  Content for Tab 3
+                </p>
+              </TabsContent>
+              <TabsContent value="tab-4">
+                <p className="px-4 py-1.5 text-xs text-muted-foreground">
+                  Content for Tab 4
+                </p>
+              </TabsContent>
+            </div>
           </Tabs>
+
+          <DashedLine orientation="horizontal" className="w-full" />
+
+          <Github />
         </StaggerContainer>
       </div>
       <Footer />
