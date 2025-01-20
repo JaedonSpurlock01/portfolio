@@ -63,12 +63,13 @@ export const ProjectModal = ({
             <div>
               <div className="flex justify-between items-start p-4">
                 <div>
-                  <motion.p
+                  <motion.div
                     layoutId={`title-${active.title}-${id}`}
+                    layout
                     className="font-medium text-primary"
                   >
                     {active.title}
-                  </motion.p>
+                  </motion.div>
                   <motion.p
                     layoutId={`description-${active.description}-${id}`}
                     className="text-secondary text-sm"
@@ -81,13 +82,7 @@ export const ProjectModal = ({
               </div>
 
               <div className="relative px-4">
-                <motion.div
-                  layout
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="text-sm text-secondary overflow-auto"
-                >
+                <motion.div className="text-sm text-secondary overflow-auto">
                   <p className="text-primary font-medium text-base">Features</p>
                   {active.features.map((feature, index) => (
                     <li key={index}>{feature}</li>
@@ -96,13 +91,7 @@ export const ProjectModal = ({
               </div>
 
               <div className="relative px-4 pt-4">
-                <motion.div
-                  layout
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="text-sm text-secondary overflow-auto"
-                >
+                <motion.div className="text-sm text-secondary overflow-auto">
                   <p className="text-primary font-medium text-base">
                     Technologies
                   </p>

@@ -30,19 +30,18 @@ const ProjectCard = ({
           />
         </motion.div>
         <div className="p-2 flex flex-col">
-          <div className="flex items-center justify-between">
-            <motion.h3
-              layoutId={`title-${card.title}-${id}`}
-              className="text-sm font-bold text-primary"
-            >
-              {card.title}
-            </motion.h3>
+          <motion.div
+            layoutId={`title-${card.title}-${id}`}
+            className="text-sm flex justify-between font-medium text-primary"
+            layout
+          >
+            {card.title}
 
             <ArrowUpRight
               size={16}
               className="group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-transform text-secondary"
             />
-          </div>
+          </motion.div>
 
           <motion.p
             layoutId={`description-${card.description}-${id}`}
