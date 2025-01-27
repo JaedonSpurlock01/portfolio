@@ -73,7 +73,7 @@ export default function Home() {
           <Tabs
             defaultValue="tab-1"
             orientation="vertical"
-            className="flex w-full gap-2"
+            className="flex flex-col sm:flex-row w-full gap-2"
           >
             <TabsList className="flex-col rounded-none border-l h-full border-border bg-transparent p-0">
               <TabsTrigger
@@ -82,12 +82,12 @@ export default function Home() {
               >
                 Hiking
               </TabsTrigger>
-              <TabsTrigger
+              {/* <TabsTrigger
                 value="tab-2"
                 className="text-base relative w-full justify-start rounded-none after:absolute after:inset-y-0 after:start-0 after:w-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:after:bg-primary"
               >
                 Climbing
-              </TabsTrigger>
+              </TabsTrigger> */}
               <TabsTrigger
                 value="tab-3"
                 className="text-base relative w-full justify-start rounded-none after:absolute after:inset-y-0 after:start-0 after:w-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none data-[state=active]:after:bg-primary"
@@ -99,11 +99,11 @@ export default function Home() {
               <TabsContent value="tab-1">
                 <Hiking />
               </TabsContent>
-              <TabsContent value="tab-2">
+              {/* <TabsContent value="tab-2">
                 <p className="px-4 py-1.5 text-xs text-muted-foreground">
                   Content for Tab 2
                 </p>
-              </TabsContent>
+              </TabsContent> */}
               <TabsContent value="tab-3">
                 <Cochlear />
               </TabsContent>

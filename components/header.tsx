@@ -15,11 +15,11 @@ export default function Header() {
   return (
     <div className="max-content-width flex flex-col gap-10">
       <LocationMap />
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col items-start md:flex-row gap-10 md:gap-0 md:justify-between md:items-center">
         <div className="flex gap-4 z-10 items-center">
           <AvatarImage />
           <div>
-            <h1 className="text-3xl text-primary">{info.name}</h1>
+            <h1 className="text-xl md:text-3xl text-primary">{info.name}</h1>
             <p className="text-lg text-secondary">{info.role}</p>
           </div>
         </div>

@@ -16,7 +16,10 @@ export default function Education() {
           className="flex flex-col gap-2 mt-4 border-l-4 pl-4 hover:border-primary transition-colors"
         >
           <span className="flex gap-2 items-center">
-            <p>{education.school}</p>
+            <p className="line-clamp-1 sm:hidden overflow-ellipsis">CSUSM</p>
+            <p className="line-clamp-1 hidden sm:block overflow-ellipsis">
+              {education.school}
+            </p>
             <Badge className="bg-primary-foreground text-secondary hover:bg-primary-foreground">
               {education.date}
             </Badge>

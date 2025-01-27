@@ -18,7 +18,7 @@ export default function Navigation() {
             height={20}
             className="h-fit"
           />
-          <h1 className="text-2xl">{info.name}</h1>
+          <h1 className="md:text-2xl">{info.name}</h1>
         </Link>
 
         <nav className="flex gap-4 items-center text-lg">
@@ -34,12 +34,12 @@ export default function Navigation() {
           >
             blog
           </Link>
-          <Link
+          {/* <Link
             href="/visitors"
             className="text-secondary hover:text-secondary/60 transition-colors"
           >
             visitors
-          </Link>
+          </Link> */}
           <ThemeToggle />
         </nav>
       </div>

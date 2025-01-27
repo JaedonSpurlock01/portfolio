@@ -12,7 +12,7 @@ export default function Footer() {
           <ContactButton />
         </div>
       </div>
-      <div className="max-content-width flex justify-between text-sm">
+      <div className="max-content-width flex flex-col gap-4 sm:gap-0 sm:flex-row sm:justify-between text-sm">
         <div className="flex gap-1 items-center">
           <ArrowDownToDot size={12} />
           Made in Oceanside, CA

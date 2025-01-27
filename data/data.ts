@@ -25,7 +25,8 @@ export const work = [
     date: "May 2025",
     imageSrc: "/welfie.png",
     href: "https://www.linkedin.com/company/welfie/",
-    description: "Incoming intern for the Rotary-Mission-Systems (RMS) team in Orlando, Florida. I interviewed for this position in-person at the SHPE convention center.",
+    description:
+      "Incoming intern for the Rotary-Mission-Systems (RMS) team in Orlando, Florida. I interviewed for this position in-person at the SHPE convention center.",
   },
   {
     company: "Welfie",
@@ -79,7 +80,16 @@ export const education = [
 ] as const;
 
 export const skills = {
-  languages: ["Python", "C++", "TypeScript", "CSS", "HTML", "JSON", "Yaml", "GoLang"],
+  languages: [
+    "Python",
+    "C++",
+    "TypeScript",
+    "CSS",
+    "HTML",
+    "JSON",
+    "Yaml",
+    "GoLang",
+  ],
   frameworks: ["React", "React Native", "NodeJS", "ROS2", "Express", "NextJS"],
   tools: [
     "AWS",
@@ -91,7 +101,7 @@ export const skills = {
     "GitHub",
     "Postman",
     "PostgreSQL",
-  ]
+  ],
 } as const;
 
 export const projects = [
@@ -115,21 +125,24 @@ export const projects = [
       "Choose between DFS, BFS, A*, and Dijkstra algorithms",
       "Customize the color scheme",
       "Change animation speed realtime",
-    ]
+    ],
   },
   {
     title: "GDSC Website",
-    description: "Student organization website for GDSC to learn and develop software engineering",
+    description:
+      "Student organization website for GDSC to learn and develop software engineering. This project was built with an emphasis on high quality software, including industry-standard design patterns such as the SSOT, Singleton, and MVC patterns. In addition, there are CI/CD pipelines built into the frontend and backend services, including full test coverage, static analysis, and security scanning.",
     websiteUrl: "https://github.com/JaedonSpurlock01/robotcar",
     githubUrl: "https://github.com/JaedonSpurlock01/robotcar",
     imageSrc: "/projects/gdscweb.png",
     date: "Jun 2024 - Present",
-    tags: ["TypeScript", "React", "NextJS", "MagicUI", "ShadcnUI"],
+    tags: ["TypeScript", "React", "Vite", "Golang", "Echo", "PostgreSQL"],
     features: [
-      "Create, edit, and delete events",
-      "Create, edit, and delete members",
-      "Create, edit, and delete projects",
-    ]
+      "Complete self-built secure authentication package",
+      "CRUD operations with users, events, and projects",
+      "Role-based authorization for user management",
+      "Admin dashboard for event management",
+      "Event reminders with email and push notifications",
+    ],
   },
   {
     title: "University Rover",
@@ -150,7 +163,7 @@ export const projects = [
       "Autonomous navigation",
       "Remote control through ssh terminal",
       "Navigate across different terrains",
-    ]
+    ],
   },
   {
     title: "Robotic Car Platform",
@@ -161,9 +174,7 @@ export const projects = [
     imageSrc: "/projects/robotcar.webp",
     date: "April 2024 - May 2024",
     tags: ["C++", "ROS", "Raspberry PI", "SDL API"],
-    features: [
-      "Bluetooth control with controller",
-    ]
+    features: ["Bluetooth control with controller"],
   },
 ];
 
@@ -204,4 +215,19 @@ export const organizations = [
   //     "Supported the acquirement of new engineering spaces on campus, providing a conducive environment for engineers to learn and grow",
   //   imageSrc: "/projects/routify.gif",
   // },
+];
+
+export const hiking = [
+  {
+    name: "Raptor Ridge via Mule Hill Trail",
+    day: "25",
+    month: "JAN",
+    description: "A nice flat, half marathon training hike near lake hodges.",
+    difficulty: "Medium",
+    imageSrc: "/hiking/01-25-25.jpg",
+    distance: "10.57 mi",
+    elevation: "561 ft",
+    duration: "1h 50m",
+    link: "https://www.alltrails.com/trail/us/california/raptor-ridge-via-mule-hill-trail",
+  },
 ];
