@@ -8,7 +8,7 @@ import Projects from "@/components/projects";
 import Skills from "@/components/skills";
 import DashedLine from "@/components/ui/dashed-line";
 import StaggerContainer from "@/components/ui/stagger-container";
-import Widgets from "@/components/widgets";
+// import Widgets from "@/components/widgets";
 
 export default function Home() {
   return (
@@ -28,7 +28,7 @@ export default function Home() {
           <DashedLine orientation="horizontal" className="max-content-width" />
           <Posts getLatestBlogs={true} />
           <DashedLine orientation="horizontal" className="max-content-width" />
-          <Widgets />
+          {/* <Widgets /> */}
         </StaggerContainer>
       </div>
 
