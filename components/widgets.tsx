@@ -63,7 +63,7 @@ export default function Widgets() {
   return (
     <div className="w-full">
       <StaggerContainer delay={0.3} childDelay={0.2}>
-        <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex gap-20 flex-col md:flex-row md:gap-4">
           <div className="flex flex-col gap-2 w-full">
             <span className="flex gap-2 items-center text-primary">
               <BookOpenText /> Reading

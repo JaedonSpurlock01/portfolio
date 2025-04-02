@@ -52,12 +52,12 @@ export const work = [
 
 export const leadership = [
   {
-    club: "Google Developer Student Club",
+    club: "GDSC Club",
     position: "President",
     location: "CSUSM",
     date: "May 2024 - Present",
     description:
-      "Building new infrastructure for long-term expansion and establishing fundamental technical skills for software engineers at CSUSM. I’m covering new documentation, testing frameworks, full-stack development, and devops. We focus on contributions to large, open-source projects to help push our students into the industry level.",
+      "Current lead of the Google Developer Student Club. Building new infrastructure for long-term expansion and establishing fundamental technical skills for software engineers at CSUSM. I’m covering new documentation, testing frameworks, full-stack development, and devops. We focus on contributions to large, open-source projects to help push our students into the industry level.",
   },
   {
     club: "SKALE",
@@ -76,7 +76,7 @@ export const leadership = [
       "Help lead multiple robotics projects in collaboration with SKALE. Right now the three main projects are a remote-controlled car, robotic arm, and micromouse. These small projects are used to help introduce new students to robotics and software development.",
   },
   {
-    club: "Association for Computer Machinery",
+    club: "ACM Club",
     position: "Technical Lead",
     location: "CSUSM",
     date: "Jan 2025 - Present",
