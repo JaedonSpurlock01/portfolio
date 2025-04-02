@@ -2,7 +2,6 @@ import createMDX from "@next/mdx";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Configure `pageExtensions` to include markdown and MDX files
@@ -10,22 +9,25 @@ const nextConfig = {
   // Optionally, add any other Next.js config below
 
   images: {
-    domains: ["avatar.iran.liara.run"]
-  }
+    domains: ["avatar.iran.liara.run", "avatars.githubusercontent.com"],
+  },
 };
 
 const withMDX = createMDX({
   options: {
-    rehypePlugins: [rehypeSlug, [
-      rehypeAutolinkHeadings,
-      {
-        behavior: "wrap",
-        properties: {
-          className: ["subheading-anchor"],
-          ariaLabel: "Link to section",
+    rehypePlugins: [
+      rehypeSlug,
+      [
+        rehypeAutolinkHeadings,
+        {
+          behavior: "wrap",
+          properties: {
+            className: ["subheading-anchor"],
+            ariaLabel: "Link to section",
+          },
         },
-      },
-    ],],
+      ],
+    ],
   },
 });
 

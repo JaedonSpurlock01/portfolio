@@ -7,6 +7,13 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
 import DashedLine from "./dashed-line";
 import { Badge } from "./badge";
 
+const status = {
+  active:
+    "ml-4 bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400",
+  inactive:
+    "ml-4 bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400",
+};
+
 export const ProjectModal = ({
   active,
   setActive,
@@ -69,6 +76,13 @@ export const ProjectModal = ({
                     className="font-medium text-primary"
                   >
                     {active.title}
+                    <span
+                      className={
+                        status[active.archived ? "inactive" : "active"]
+                      }
+                    >
+                      {active.archived ? "Archived" : "Active"}
+                    </span>
                   </motion.div>
                   <motion.p
                     layoutId={`description-${active.description}-${id}`}

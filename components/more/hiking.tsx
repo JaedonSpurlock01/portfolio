@@ -37,7 +37,7 @@ export default function Hiking() {
       >
         <CarouselContent>
           {hiking.map((hike, index) => (
-            <CarouselItem key={index} className="basis-[20%]">
+            <CarouselItem key={index} className="basis-[14%] sm:basis-[8%]">
               <div
                 className={cn(
                   "text-center w-fit hover:cursor-pointer text-secondary hover:text-primary transition-all hover:bg-primary-foreground hover:border-border border border-background p-2 rounded-lg",
@@ -71,11 +71,11 @@ export default function Hiking() {
                   className="w-full aspect-square h-full object-cover rounded-xl"
                 />
               </Card>
-              <div className="col-span-1">
+              <div className="col-span-1 flex flex-col">
                 <p className="text-xl">{hike.name}</p>
                 <p className="text-secondary">{hike.description}</p>
 
-                <DashedLine orientation="horizontal" className="w-full" />
+                <DashedLine orientation="horizontal" className="w-full my-2" />
 
                 <div className="grid mb-4 grid-cols-2 sm:grid-cols-1">
                   <span className="flex gap-2 items-center mt-2">
@@ -104,7 +104,7 @@ export default function Hiking() {
                 <Link
                   href={hike.link}
                   target="_blank"
-                  className="px-10 text-sm hover:text-secondary/60 transition-colors p-3 bg-primary-foreground border border-border rounded-lg"
+                  className="w-full flex justify-center sm:w-fit sm:px-10 text-sm hover:text-secondary/60 transition-colors p-3 bg-primary-foreground border border-border rounded-lg"
                 >
                   View Route
                 </Link>

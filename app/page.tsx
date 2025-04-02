@@ -2,13 +2,14 @@ import Education from "@/components/education";
 import Experience from "@/components/experience";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import Leadership from "@/components/leadership";
 import Navigation from "@/components/navigation";
 import Posts from "@/components/posts";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
 import DashedLine from "@/components/ui/dashed-line";
 import StaggerContainer from "@/components/ui/stagger-container";
-// import Widgets from "@/components/widgets";
+import Widgets from "@/components/widgets";
 
 export default function Home() {
   return (
@@ -26,9 +27,11 @@ export default function Home() {
           <DashedLine orientation="horizontal" className="max-content-width" />
           <Projects />
           <DashedLine orientation="horizontal" className="max-content-width" />
+          <Leadership />
+          <DashedLine orientation="horizontal" className="max-content-width" />
           <Posts getLatestBlogs={true} />
           <DashedLine orientation="horizontal" className="max-content-width" />
-          {/* <Widgets /> */}
+          <Widgets />
         </StaggerContainer>
       </div>
 
