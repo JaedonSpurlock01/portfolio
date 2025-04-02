@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { Tooltip, TooltipContent, TooltipProvider } from "./ui/tooltip";
 import { TooltipTrigger } from "@radix-ui/react-tooltip";
 import { cn } from "@/lib/utils";
@@ -68,17 +68,14 @@ const days = {
 
 const GitCommitHeatmap = ({
   year = new Date().getFullYear(),
-  data = {},
 }: {
   year?: number;
-  data?: Record<string, number>;
 }) => {
   const startDate = new Date(year, 0, 1);
   const endDate = new Date(year, 11, 31);
   const firstDay = startDate.getDay();
 
-  const getDayValue = (date: Date) => {
-    const dateString = date.toISOString().split("T")[0];
+  const getDayValue = () => {
     const randomColor = Math.floor(Math.random() * 8);
     return randomColor || 0;
   };
@@ -162,7 +159,7 @@ const TableRow = ({
   getColor: (value: number) => string;
 }) => {
   const cells: JSX.Element[] = [];
-  let currentDate = new Date(startDate);
+  const currentDate = new Date(startDate);
 
   if (skipFirst) {
     cells.push(
