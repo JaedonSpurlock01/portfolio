@@ -1,7 +1,7 @@
 import { getAllBlogs } from "@/lib/get-blogs";
-import { Book } from "lucide-react";
 import React from "react";
 import StaggerContainer from "./ui/stagger-container";
+import { Title } from "./ui/title";
 
 export default async function Posts({
   getLatestBlogs = false,
@@ -21,9 +21,7 @@ export default async function Posts({
 
   return (
     <div className="w-full">
-      <span className="flex gap-2 items-center text-primary">
-        <Book /> My blog
-      </span>
+      <Title title="Writings" />
 
       <StaggerContainer delay={0.3} childDelay={0.2}>
         {blogs.map((blog) => {
@@ -39,7 +37,7 @@ export default async function Posts({
               className="flex flex-col overflow-hidden"
             >
               <div className="flex flex-col gap-2 mt-4 border-l-4 pl-4 hover:border-primary transition-colors">
-                <p>{title}</p>
+                <p className="text-sm font-semibold">{title}</p>
                 <p className="text-secondary text-sm">{date}</p>
               </div>
             </a>

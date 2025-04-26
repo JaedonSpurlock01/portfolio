@@ -18,28 +18,16 @@ export default function Navigation() {
             height={20}
             className="h-fit"
           />
-          <h1 className="md:text-2xl">{info.name}</h1>
+          <h1 className="md:text-xl">{info.name}</h1>
         </Link>
 
         <nav className="flex gap-4 items-center text-lg">
-          <Link
-            href="/more"
-            className="text-secondary hover:text-secondary/60 transition-colors"
-          >
-            more
-          </Link>
           <Link
             href="/blogs"
             className="text-secondary hover:text-secondary/60 transition-colors"
           >
             blog
           </Link>
-          {/* <Link
-            href="/visitors"
-            className="text-secondary hover:text-secondary/60 transition-colors"
-          >
-            visitors
-          </Link> */}
           <ThemeToggle />
         </nav>
       </div>

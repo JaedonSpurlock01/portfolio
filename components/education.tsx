@@ -1,14 +1,12 @@
 import { education } from "@/data/data";
-import { GraduationCap } from "lucide-react";
 import React from "react";
 import { Badge } from "./ui/badge";
+import { Title } from "./ui/title";
 
 export default function Education() {
   return (
     <div className="max-content-width">
-      <span className="flex gap-2 items-center text-primary">
-        <GraduationCap /> Education
-      </span>
+      <Title title="Education" />
 
       {education.map((education) => (
         <div
@@ -17,7 +15,7 @@ export default function Education() {
         >
           <span className="flex gap-2 items-center">
             <p className="line-clamp-1 sm:hidden overflow-ellipsis">CSUSM</p>
-            <p className="line-clamp-1 hidden sm:block overflow-ellipsis">
+            <p className="line-clamp-1 hidden sm:block overflow-ellipsis text-sm font-medium">
               {education.school}
             </p>
             <Badge className="bg-primary-foreground text-secondary hover:bg-primary-foreground">

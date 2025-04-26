@@ -1,61 +1,36 @@
 import { work } from "@/data/data";
-import { BriefcaseBusiness } from "lucide-react";
 import React from "react";
-import { Badge } from "./ui/badge";
-
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-} from "@/components/ui/accordion";
-import * as AccordionPrimitive from "@radix-ui/react-accordion";
-
-import { ChevronDown } from "lucide-react";
+import { Title } from "./ui/title";
+import { Dot } from "lucide-react";
 
 export default function Experience() {
   return (
     <div className="max-content-width">
-      <span className="flex gap-2 items-center text-primary">
-        <BriefcaseBusiness /> Work Experience
-      </span>
+      <Title title="Experience" />
 
-      <Accordion type="single" collapsible className="w-full" defaultValue="3">
-        {work.map((item) => (
-          <AccordionItem
-            value={item.date}
-            key={item.date}
-            className="border-none"
-          >
-            <AccordionPrimitive.Header className="flex">
-              <AccordionPrimitive.Trigger className="flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180">
-                <div
-                  key={item.company}
-                  className="flex flex-col gap-2 mt-4 border-l-4 pl-4 hover:border-primary transition-colors"
-                >
-                  <span className="flex gap-2 items-center">
-                    <p>{item.company}</p>
-                    <Badge className="bg-primary-foreground text-secondary hover:bg-primary-foreground">
-                      {item.date}
-                    </Badge>
-                  </span>
-                  <p className="text-secondary text-sm">
-                    {item.position} / {item.location}
-                  </p>
-                </div>
-                <ChevronDown
-                  size={16}
-                  strokeWidth={2}
-                  className="shrink-0 opacity-60 transition-transform duration-200"
-                  aria-hidden="true"
-                />
-              </AccordionPrimitive.Trigger>
-            </AccordionPrimitive.Header>
-            <AccordionContent className="text-secondary/60 ml-5 mt-2 text-sm">
-              {item.description}
-            </AccordionContent>
-          </AccordionItem>
+      <div className="flex flex-col gap-4 mt-4">
+        {work.map((item, index) => (
+          <div key={index} className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+            <p className="text-muted-foreground text-sm">{item.date}</p>
+
+            <div className="col-span-3">
+              <div className="flex justify-between items-center">
+                <p className="font-medium text-sm text-primary/90">
+                  <span className="underline">{item.company}</span> |{" "}
+                  {item.position}
+                </p>
+
+                <p className="text-xs flex items-center text-muted-foreground hover:text-primary cursor-pointer">
+                  <Dot /> Location
+                </p>
+              </div>
+              <p className="text-sm text-muted-foreground mt-1 leading-6">
+                {item.description}
+              </p>
+            </div>
+          </div>
         ))}
-      </Accordion>
+      </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full h-12 mt-24 flex flex-col items-center justify-center text-secondary gap-4">
+    <footer className="w-full h-12 mt-12 flex flex-col items-center justify-center text-secondary gap-4">
       <div className="max-content-width flex justify-between items-center text-sm">
         <div className="flex gap-2">
           <LinkedInButton />

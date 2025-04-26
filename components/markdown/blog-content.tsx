@@ -36,7 +36,7 @@ export default function BlogContent({
         )}
         <BlogInfo blog={blog} />
         <DashedLine orientation="horizontal" />
-        <div className="prose dark:prose-invert prose-code:before:hidden prose-code:after:hidden prose-a:no-underline prose-headings:text-xl prose-p:text-secondary max-w-none">
+        <div className="prose dark:prose-invert prose-code:before:hidden prose-code:after:hidden prose-a:no-underline prose-p:text-sm prose-headings:text-lg prose-p:text-secondary max-w-none">
           {children}
         </div>
       </article>

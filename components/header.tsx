@@ -19,8 +19,10 @@ export default function Header() {
         <div className="flex gap-4 z-10 items-center">
           <AvatarImage />
           <div>
-            <h1 className="text-xl md:text-3xl text-primary">{info.name}</h1>
-            <p className="text-lg text-secondary">{info.role}</p>
+            <h1 className="text-lg md:text-xl text-primary font-semibold">
+              {info.name}
+            </h1>
+            <p className="text-secondary">{info.role}</p>
           </div>
         </div>
 
@@ -33,7 +35,24 @@ export default function Header() {
       </div>
 
       <div>
-        <p className="text-balance text-secondary">{info.about}</p>
+        <p className="text-sm text-secondary">
+          Hello! I&apos;m a software engineer with{" "}
+          <span className="text-primary">
+            multiple industry and student leadership experiences
+          </span>
+          . I&apos;m looking to contribute to impactful, multi-disciplinary
+          engineering projects. I have experience in
+          <span className="text-primary">full-stack development</span>,{" "}
+          <span className="text-primary">devops</span>, and{" "}
+          <span className="text-primary">infrastructure (IaC)</span>.
+        </p>
+        <p className="text-sm mt-2 text-secondary">
+          I was born completely deaf and advocate for the hard-of-hearing (HoH).
+          Learn more about my story{" "}
+          <a href="/blog/hearing-journey" className="underline text-primary">
+            here
+          </a>
+        </p>
       </div>
     </div>
   );

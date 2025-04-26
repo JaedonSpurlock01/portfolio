@@ -29,7 +29,7 @@ const AvatarImage = () => {
           {/* Image container */}
           <div className="absolute inset-0 rounded-full bg-neutral-900 z-10">
             <Image
-              src="/jaedon.jpg"
+              src="/jaedon.png"
               alt="Jaedon Spurlock"
               className="w-full h-full rounded-full object-cover opacity-80 scale-95"
               width={200}
